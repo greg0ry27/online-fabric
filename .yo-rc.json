@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "gitCompany": "",
+    "baseName": "OnlineFabric",
+    "packageName": "com.of",
+    "packageFolder": "com/of",
+    "serverPort": 8080,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "enableTranslation": false,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "clientFramework": "react",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "6.1.2",
+    "jwtSecretKey": "OTAwZDEzNWE1YTZmYTVjNDE1N2RmNWZjMDg4YzI4ZDQ3ODhiZmFhZjE1NWUwYzU0MzdkNTI0MjllMDkwNmE0Y2FjOTU5YjlhOWQ4MTYxMmY3MzhjNzhkZDAwNzZkNDI1ZGExNDZmNTBiZGQwMDZhZDNkMzEzMTQzODYwNjIxZGY=",
+    "clientTheme": "none",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": []
+  },
+  "git-provider": "GitHub",
+  "git-company": "greg0ry27",
+  "repository-name": "online-fabric"
+}
