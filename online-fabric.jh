@@ -1,0 +1,65 @@
+entity Player {
+	name String required minlength(3) maxlength (64),
+    lastLogin ZonedDateTime required,
+    created ZonedDateTime required
+}
+
+entity Character {
+ 	type String required minlength(3) maxlength (64),
+    lastUse ZonedDateTime required,
+    created ZonedDateTime required
+}
+
+entity ItemGroup{
+	name String required
+    description String maxlength(512)
+}
+
+entity Item{
+	name String required minlength(3) maxlength(64),
+    description String maxlength(512),
+    settings String
+}
+
+entity InventorySlot{
+	slot Integer required min(0),
+    amount Integer required min(1)
+}
+
+entity Inventory {
+	type String required minlength(3) maxlength(64)
+    settings String
+}
+
+entity Currency{
+	code String required minlength(2) maxlength(2),
+    name String required maxlength(64),
+    description String maxlength(512),
+    settings String,
+}
+
+entity PlayerCurrency {
+	amount Integer required
+}
+
+relationship OneToMany {
+	Player to Character
+    Player to Inventory
+    Player to PlayerCurrency
+    Currency to PlayerCurrency
+    Item to InventorySlot
+    ItemGroup to Item
+    Inventory to InventorySlot
+}
+
+paginate Player, Character, Inventory, Items, ItemGroup, Currency, InventorySlot, PlayerCurrency with infinite-scroll
+
+
+
+
+
+
+
+
+
+
