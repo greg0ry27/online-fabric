@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity InventorySlot.
+    -->
+    <changeSet id="20190623192752-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="item_id"
+                                 baseTableName="inventory_slot"
+                                 constraintName="fk_inventory_slot_item_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="item"/>
+
+        <addForeignKeyConstraint baseColumnNames="inventory_id"
+                                 baseTableName="inventory_slot"
+                                 constraintName="fk_inventory_slot_inventory_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="inventory"/>
+
+    </changeSet>
+</databaseChangeLog>

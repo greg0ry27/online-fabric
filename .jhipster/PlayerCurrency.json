@@ -1,0 +1,37 @@
+{
+    "name": "PlayerCurrency",
+    "fields": [
+        {
+            "fieldName": "amount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "player",
+            "otherEntityRelationshipName": "playerCurrency",
+            "relationshipName": "player",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "currency",
+            "otherEntityRelationshipName": "playerCurrency",
+            "relationshipName": "currency",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190623192755",
+    "entityTableName": "player_currency",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

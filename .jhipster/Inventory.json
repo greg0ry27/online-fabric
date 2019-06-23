@@ -1,0 +1,44 @@
+{
+    "name": "Inventory",
+    "fields": [
+        {
+            "fieldName": "type",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": 3,
+            "fieldValidateRulesMaxlength": 64
+        },
+        {
+            "fieldName": "settings",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "inventorySlot",
+            "otherEntityRelationshipName": "inventory",
+            "relationshipName": "inventorySlot"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "player",
+            "otherEntityRelationshipName": "inventory",
+            "relationshipName": "player",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190623192753",
+    "entityTableName": "inventory",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

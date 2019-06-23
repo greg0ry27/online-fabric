@@ -1,0 +1,52 @@
+{
+    "name": "Item",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": 3,
+            "fieldValidateRulesMaxlength": 64
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 512
+        },
+        {
+            "fieldName": "settings",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "inventorySlot",
+            "otherEntityRelationshipName": "item",
+            "relationshipName": "inventorySlot"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "itemGroup",
+            "otherEntityRelationshipName": "item",
+            "relationshipName": "itemGroup",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190623192751",
+    "entityTableName": "item",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
