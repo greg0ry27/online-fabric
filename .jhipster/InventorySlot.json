@@ -1,0 +1,48 @@
+{
+    "name": "InventorySlot",
+    "fields": [
+        {
+            "fieldName": "slot",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min"
+            ],
+            "fieldValidateRulesMin": 0
+        },
+        {
+            "fieldName": "amount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min"
+            ],
+            "fieldValidateRulesMin": 1
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "item",
+            "otherEntityRelationshipName": "inventorySlot",
+            "relationshipName": "item",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "inventory",
+            "otherEntityRelationshipName": "inventorySlot",
+            "relationshipName": "inventory",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190623192752",
+    "entityTableName": "inventory_slot",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

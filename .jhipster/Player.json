@@ -1,0 +1,59 @@
+{
+    "name": "Player",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": 3,
+            "fieldValidateRulesMaxlength": 64
+        },
+        {
+            "fieldName": "lastLogin",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "created",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "character",
+            "otherEntityRelationshipName": "player",
+            "relationshipName": "character"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "inventory",
+            "otherEntityRelationshipName": "player",
+            "relationshipName": "inventory"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "playerCurrency",
+            "otherEntityRelationshipName": "player",
+            "relationshipName": "playerCurrency"
+        }
+    ],
+    "changelogDate": "20190623192748",
+    "entityTableName": "player",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
